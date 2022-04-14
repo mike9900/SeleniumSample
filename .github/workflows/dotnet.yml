@@ -23,10 +23,10 @@ jobs:
     - name: Build
       run: dotnet build --no-restore SeleniumExample/SeleniumExample.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal SeleniumExample/SeleniumExample.sln
+      run: dotnet test --no-build --verbosity normal SeleniumExample/SeleniumExample.sln --logger:"nunit"
     - name: Test Reporter
       uses: dorny/test-reporter@v1.5.0
       with:
         name: Nunit Report
-        path: '*.xml'
+        path: "*.xml"
         reporter: dotnet-trx
