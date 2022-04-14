@@ -24,3 +24,5 @@ jobs:
       run: dotnet build --no-restore SeleniumExample/SeleniumExample.sln
     - name: Test
       run: dotnet test --no-build --verbosity normal SeleniumExample/SeleniumExample.sln
+    - name: Test Reporter
+      uses: dorny/test-reporter@v1.5.0
