@@ -27,6 +27,6 @@ jobs:
     - name: Test Reporter
       uses: dorny/test-reporter@v1.5.0
       with:
-        name: Nunit Report
-        path: "*.xml"
+        name: Test Report
+        path: 'SeleniumExample/TestResults/*.trx'
         reporter: dotnet-trx
