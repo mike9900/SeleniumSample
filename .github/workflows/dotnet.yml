@@ -9,6 +9,7 @@ on:
 
 jobs:
   build:
+    name: Build and Test
 
     runs-on: ubuntu-latest
 
@@ -27,6 +28,6 @@ jobs:
     - name: Test Reporter
       uses: dorny/test-reporter@v1.5.0
       with:
-        name: Test Report
+        name: Publish Test Report
         path: 'SeleniumExample/TestResults/*.trx'
         reporter: dotnet-trx
